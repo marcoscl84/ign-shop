@@ -32,6 +32,7 @@ export const Product = styled("a", {
     left: "0.25rem",
     right: "0.25rem",
 
+    padding: '2rem',
     borderRadius: 6,
 
     display: "flex",
