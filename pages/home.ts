@@ -32,7 +32,7 @@ export const Product = styled("a", {
     left: "0.25rem",
     right: "0.25rem",
 
-    padding: '2rem',
+    padding: "2rem",
     borderRadius: 6,
 
     display: "flex",
@@ -47,12 +47,13 @@ export const Product = styled("a", {
 
     strong: {
       fontsize: "$lg",
+      color: "$gray100",
     },
 
     span: {
       fontsize: "$xl",
       fontWeight: "bold",
-      color: "green300",
+      color: "$gray100",
     },
   },
 
