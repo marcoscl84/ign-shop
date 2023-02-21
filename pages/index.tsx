@@ -19,7 +19,7 @@ interface HomeProps {
     id: string;
     name: string;
     imageUrl: string;
-    price: number;
+    price: string;
   }[];
 }
 
@@ -37,7 +37,7 @@ export default function Home({ products }: HomeProps) {
 
       {products.map((product) => {
         return (
-          <Link href={`/products/${product.id}`} key={product.id}>
+          <Link href={`/product/${product.id}`} key={product.id}>
             <Product className="keen-slider__slide">
               <Image src={product.imageUrl} alt={""} width={520} height={480} />
               <footer>
@@ -55,7 +55,7 @@ export default function Home({ products }: HomeProps) {
 // getStaticProps cria a versão estática em cache para melhorar a performance da pág,
 // ao invés de getServerSideProps que revalida a cada carregamento da pág.
 // Só é possível utilizar quando não houver necessidade de requisição de informações dinâmicas do servidor
-// (quando não usa cookies, quando não há usuário logado...)
+// (quando não usa cookies, quando não há usuário logado, ou qualquer dado em tempo real...)
 export const getStaticProps: GetStaticProps = async () => {
   // await new Promise(resolve => setTimeout(resolve, 2000))
   const response = await stripe.products.list({
