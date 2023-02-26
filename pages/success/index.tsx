@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Stripe from "stripe";
 import { stripe } from "@/lib/stripe";
+import Head from "next/head";
 
 interface SuccessProps {
   customerName: string;
@@ -15,20 +16,28 @@ interface SuccessProps {
 
 export default function Success({ customerName, product }: SuccessProps) {
   return (
-    <SuccessContainer>
-      <h1>Compra efeutada!</h1>
+    <>
+      <Head>
+        <title>Compra feita | Ign Shop</title>
 
-      <ImageContainer>
-        <Image src={product.imageUrl} alt={""} width={120} height={110} />
-      </ImageContainer>
+        <meta name="robots" content="noindex"></meta>
+      </Head>
 
-      <p>
-        Daleee <strong>{customerName}</strong>, tua camiseta{" "}
-        <strong>{product.name}</strong>, já tá a caminho da tua casa.
-      </p>
+      <SuccessContainer>
+        <h1>Compra efeutada!</h1>
 
-      <Link href={""}>Voltar ao catálogo</Link>
-    </SuccessContainer>
+        <ImageContainer>
+          <Image src={product.imageUrl} alt={""} width={120} height={110} />
+        </ImageContainer>
+
+        <p>
+          Daleee <strong>{customerName}</strong>, tua camiseta{" "}
+          <strong>{product.name}</strong>, já tá a caminho da tua casa.
+        </p>
+
+        <Link href={""}>Voltar ao catálogo</Link>
+      </SuccessContainer>
+    </>
   );
 }
 

@@ -10,6 +10,7 @@ import {
 import { useRouter } from "next/router";
 import axios from "axios";
 import { useState } from "react";
+import Head from "next/head";
 
 interface ProductProps {
   product: {
@@ -60,22 +61,31 @@ export default function Product1({ product }: ProductProps) {
   }
 
   return (
-    <ProductContainer>
-      <ImageContainer>
-        <Image src={product.imageUrl} width={520} height={480} alt={""} />
-      </ImageContainer>
+    <>
+      <Head>
+        <title>{product.name} | Ign Shop</title>
+      </Head>
 
-      <ProductDetailsContainer>
-        <h1>{product.name}</h1>
-        <span>{product.price}</span>
+      <ProductContainer>
+        <ImageContainer>
+          <Image src={product.imageUrl} width={520} height={480} alt={""} />
+        </ImageContainer>
 
-        <p>{product.description}</p>
+        <ProductDetailsContainer>
+          <h1>{product.name}</h1>
+          <span>{product.price}</span>
 
-        <button disabled={isCreatingCheckoutSession} onClick={handleBuyProduct}>
-          Comprar agora
-        </button>
-      </ProductDetailsContainer>
-    </ProductContainer>
+          <p>{product.description}</p>
+
+          <button
+            disabled={isCreatingCheckoutSession}
+            onClick={handleBuyProduct}
+          >
+            Comprar agora
+          </button>
+        </ProductDetailsContainer>
+      </ProductContainer>
+    </>
   );
 }
 
