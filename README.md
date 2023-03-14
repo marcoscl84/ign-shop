@@ -10,3 +10,7 @@ Página do produto:
 
 Página da compra realizada:
 ![image](https://user-images.githubusercontent.com/66912112/224863937-51cb7552-bf74-41d8-938b-53f4db2a79f9.png)
+
+
+Página de checkout utilizando APIs do Stripe:
+![image](https://user-images.githubusercontent.com/66912112/224864174-5d10b3b0-da0c-4d48-aa72-0c85b89edfaa.png)
