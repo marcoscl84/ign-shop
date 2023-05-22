@@ -1,3 +1,10 @@
+Projeto de um e-commerce criado em uma imersão da Rocketseat.
+Neste projeto foi criado inicialmente uma página inicial, onde aparece um carrossel de produtos. 
+Ao passar o mouse sobre os produtos, acontece uma animação trazendo o nome e o valor do produto.
+Ao clicar, acessa-se a página do produto específico, permitindo efetuar a compra. Ao efetuar a compra, o usuário é levado a uma página de confirmação que a compra foi bem sucedida. 
+Nesse projeto foi utilizado o Stripe, que é uma plataforma de pagamentos online, sendo uma API atrelada ao projeto.
+Também foram utilizadas algumas bibliotecas como "keen-slider" para montar o carrossel de produtos, "stitches" que é um framework de design de interface de usuário, "axios" que é a  biblioteca responsável por fazer requisições e permitir as transações de compra e pagamento.
+
 Link do projeto no Figma: https://www.figma.com/file/OIJJEW24DFiJO6XLqHw2DM/Ignite-Shop/duplicate
 
 Carrossel de produtos:
